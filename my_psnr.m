@@ -8,11 +8,11 @@ end
 
 F = im2double(f); % original
 G = im2double(g); % distorted
-if nargin<=2
+if nargin<=3
     dynamicRangeMax = max(g(mask>0));
     dynamicRangeMin = min(g(mask>0));
 end
-if nargin<=3
+if nargin<=4
     dynamicRangeMin = min(g(mask>0));
 end
 F(F>dynamicRangeMax) = dynamicRangeMax;
